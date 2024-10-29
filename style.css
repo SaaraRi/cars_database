@@ -27,7 +27,6 @@ body {
     font-size: var(--font-medium);
     color: var(--blue);
     background-color: #232323;
-    display: flex;
 }
   
 .page-wrap {
