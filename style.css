@@ -319,8 +319,9 @@ footer {
         width: 80vw;
     }
 
-    select label {
+    select input {
         padding: 0.5rem;
+        box-shadow: var(--shadow-small);
     }
 
     .inputButtons button {
