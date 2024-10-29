@@ -123,7 +123,7 @@ button {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-small);
     padding: 0.7rem 1rem;
-    margin: 2rem 0 0 0;
+    margin-top: 2rem;
     text-transform: capitalize;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -308,11 +308,28 @@ footer {
         background-image: url('pexels-pixabay-38570.jpg');
         filter: opacity(70%);
     }
+    
+    h2 {
+        margin-bottom: 1.5rem;
+      }
 
     input, select,
     .searchbutton, .inputButtons, 
     #form-text {
         width: 80vw;
+    }
+
+    select {
+        padding: 0.5rem;
+    }
+
+    .inputButtons button {
+        margin-top: 1.5rem;
+    }
+
+    #form-text {
+        margin-top: 0.5rem;
+        margin-bottom: 0rem;
     }
 
     .container {
