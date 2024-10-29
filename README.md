@@ -11,14 +11,14 @@ README
   before it allows the car to be added (input validity and error handling).
 
 - The added cars are stored as class objects in an array and  
-  also saved in the browser's local storage API (added car data remains  
+  saved in the browser's local storage API (added car data remains  
   visible even when the browser is refreshed/closed).
 
 - Each car's input details are displayed on a new row in a table visible on the page.  
   The table also displays a discounted price calculated for older cars,  
-  the date the car has been added, and a button to delete the car from the database.
+   the date the car has been added, and a button to delete the car from the database.
 
-- The user can use search functionality to find cars by their licence numbers.  
+- The user can use search functionality to find cars by their license numbers.  
   If found, the details of the stored car are retrieved from local storage  
   and displayed on the page.
 
@@ -26,5 +26,7 @@ README
   on both desktop and mobile devices.
 
 - Built using HTML, CSS and vanilla JavaScript.
+
 # cars_database
+
 # cars_database

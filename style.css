@@ -295,7 +295,7 @@ footer {
         text-align: center;
         width: 100%;
         margin-bottom: 190px;
-        padding: 2rem 0;
+        padding: 0.5rem 1rem 1rem 1rem;
     }
 
     .page-wrap:before {
