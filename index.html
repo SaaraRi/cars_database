@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Faster+One&display=swap" rel="stylesheet">
+        <link href="pngwing.com_.svg" rel="shortcut icon" type="image/x-icon" />
+        <title>Cars Database</title>
+    </head>
+    <body>
+    <div class="page-wrap">
+    <div class="masked">    
+        <div class="page-content">
+        <header>
+            <h1>cars database</h1>
+        </header>    
+        <main>
+            <section class="container search-container">
+                 <form id="searchCarForm">
+                    <h2>Search for Car</h2>
+                    <label for="searchCar">License number</label>
+                    <input type="text" id="searchCar" pattern="[A-Za-z]{3}-[0-9]{3}" placeholder="ABC-123"/><br>
+                    <button type="submit" class="button searchbutton">SEARCH</button>
+                </form>
+                <p id="searchResult"></p> 
+            </section>
+            <div class="add-display-container">
+            <section class="container input-container">
+                <div id="message"></div>
+                <form id="addCarForm">
+                    <h2>Add Car</h2>
+                    <div>
+                        <label for="maker">Car maker * </label>
+                        <input type="text" id="maker" required/>
+                    </div>
+                    <div>
+                        <label for="model">Car model * </label>
+                        <input type="text" id="model" required/>
+                    </div>
+                    <div>
+                        <label for="year">Year of manufacture * </label>
+                        <input type="number" id="year" required/>
+                    </div>
+                    <div>
+                        <label for="color">Car color </label>
+                        <select name="color" id="color">
+                            <option value="default" selected>Select closest color</option>
+                            <option value="beige">beige</option>
+                            <option value="black">black</option>
+                            <option value="blue">blue</option>
+                            <option value="brown">brown</option>
+                            <option value="gold">gold</option>
+                            <option value="gray">gray</option>
+                            <option value="green">green</option>
+                            <option value="maroon">maroon</option>
+                            <option value="orange">orange</option>
+                            <option value="pink">pink</option>
+                            <option value="purple">purple</option>
+                            <option value="red">red</option>
+                            <option value="silver">silver</option>
+                            <option value="tan">tan</option>
+                            <option value="white">white</option>
+                            <option value="yellow">yellow</option>
+                        </select>    
+                    </div>
+                    <div>
+                        <label for="owner">Current owner * </label>
+                        <input type="text" id="owner" required/>
+                    </div>
+                    <div>
+                        <label for="license">License number * </label>
+                        <input type="text" id="license" required/>
+                    </div>
+                    <div>
+                        <label for="price">Price * </label>
+                        <input type="number" id="price" required/>
+                    </div>
+                    <div id="form-text">
+                    <p>* = required field</p><br>
+                    <p>Note that if the car was manufactured over 10 years ago, its price will automatically be discounted by -15 %.</p>
+                    </div>
+                    <div class="inputButtons">
+                    <button type="submit" class="button">ADD CAR</button>
+                    <button type="reset" class="button">RESET FORM</button>
+                    </div>
+                </form>
+            </section>    
+            <section class="container output-container">    
+                <table id="carsTable">
+                    <thead>
+                        <tr>
+                            <th>Maker</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Color</th>
+                            <th>Owner</th>
+                            <th>License</th>
+                            <th>Price</th>
+                            <th>Discount <br>price</th>
+                            <th>Date <br> added</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table> 
+            </section>
+            </div>
+        </main>
+        <footer>
+            Copyright &copy REACT24S/Saara R.
+        </footer>
+        </div>
+    </div>    
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>

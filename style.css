@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+:root {
+    --font: "Bakbak One", sans-serif;
+    --font-small: 0.85;
+    --font-medium: 0.9rem;
+    --font-big: 1.6rem;
+    --color-light: #fdffff;
+    --color-dark: #333333;
+    --blue: #002ca7;
+    --purple: #7d0879;
+    --orange-light: #ffc55a;
+    --orange-med: #FCA811; 
+    --shadow-big: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    --shadow-small: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    --basic-border: 1px solid grey;
+    --border-radius: 5px;
+}
+
+
+body {
+    font-family: var(--font);
+    font-size: var(--font-medium);
+    color: var(--blue);
+    background-color: #232323;
+    display: flex;
+}
+  
+.page-wrap {
+    position: relative;
+}
+
+.page-wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    width: 100%;
+    height: 100%;
+    background-image: url('pexels-pixabay-38570.jpg');
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: opacity(40%);
+    mask-image: linear-gradient(rgb(3, 35, 43) 0%, transparent);
+    mask-size: 100%;
+}
+   
+.page-content {
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: var(--orange-med);
+    color: var(--color-dark);
+    padding-bottom: 0.5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0.3rem 2rem;
+    font-family: "Faster One", sans-serif;
+    font-size: 3rem;
+    color: #292929;
+  }
+
+.container {
+    background-color: var(--color-light);
+    border: var(--basic-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-big);
+    padding: 2rem;
+}  
+
+h2 {
+    font-size: var(--font-big);
+    color: var(--color-dark);
+    margin-bottom: 2.5rem;
+    align-self: flex-start;
+  }
+
+label {
+    display: block;
+    text-align: left;
+    font-size: var(--font-small);
+    margin: 0.9rem 0.5rem 0 0;
+}
+
+input, select { 
+    font-family: var(--font);
+    font-size: var(--font-medium);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    padding: 0.5em;
+    border: var(--basic-border);
+    border-radius: var(--border-radius);
+    width: 100%;
+    margin-top: 0.2rem;
+    box-shadow: var(--shadow-small);
+}
+
+input:placeholder-shown {
+    font-style: italic;
+    opacity: 70%;
+}
+
+button {
+    flex: 1;
+    font-family: var(--font);
+    font-size: var(--ont-medium);
+    color: var(--color-light);
+    background-color: var(--blue);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-small);
+    padding: 0.7rem 1rem;
+    margin: 2rem 0 0 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button:hover {
+    background-color: var(--purple);
+}
+
+.inputButtons {
+    display: flex;
+    justify-content: stretch;
+    gap: 1rem;
+}
+
+.searchbutton{
+    display: inline-block;
+    width: 132px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    max-width: 44vw;
+    margin: 2rem auto;
+}
+
+#searchCarForm {
+    flex: 1;
+}
+
+#searchResult {
+    flex: 1;
+    font-size: var(--font-medium);
+    line-height: 22px;
+    color: var(--color-dark);
+    height: auto;
+    margin: 1rem 1rem 1rem 4rem;
+}
+
+.add-display-container {
+    display: flex;
+  }
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    max-width: 340px;
+    margin-left: 1.5rem;
+    margin-top: 3rem;
+    height: 100%;
+}
+
+#addCarForm {
+    flex: 1;
+}
+
+#form-text {
+    min-width: 280px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: var(--font-small);
+    color: var(--color-dark);
+}
+
+.output-container {
+    flex: 2;
+    min-height: 85vh;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: 3rem 1.5rem; 
+    box-shadow: var(--shadow-big);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--color-light);
+}
+  
+td,
+th {
+    font-size: var(--font-small);
+    border: 1px solid #c3c3c3;
+    word-break: normal;
+    padding: 0.6rem 1rem;
+    margin: 0;
+}
+  
+th {
+    color: var(--color-dark);
+    background-color: var(--orange-light);
+    text-transform: uppercase;
+    text-align: center;
+}
+  
+td {
+    color: var(--color-dark);
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #ffc55a52;
+}
+
+button.delete {
+    background-color: transparent;
+    color: var(--blue);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-medium);
+    transition: color 0.3s ease;
+    margin: 0;
+    font-weight: bold;
+    box-shadow: none;
+}
+  
+button.delete:hover {
+    color: var(--purple);
+}
+  
+footer {
+    text-align: center;
+    font-size: 0.6rem;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+    margin-top: 200px;
+}
+  
+#message {
+    margin-top: 1rem;
+    position: fixed;
+    top:1rem;
+    right:1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+}
+  
+#message.success {
+    background-color: #026452;
+    color: var(--color-light);
+    visibility: visible;
+}
+  
+#message.error {
+    background-color: #af180d;
+    color: var(--color-light);
+    visibility: visible;
+}
+
+  
+@media (max-width: 768px) {
+
+    body {
+        background-color: #111111;
+    }
+
+    header {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 190px;
+        padding: 2rem 0;
+    }
+
+    .page-wrap:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 155px;
+        width: 100%;
+        background-image: url('pexels-pixabay-38570.jpg');
+        filter: opacity(70%);
+    }
+
+    input, select,
+    .searchbutton, .inputButtons, 
+    #form-text {
+        width: 80vw;
+    }
+
+    .container {
+      padding: 1rem rem;
+      width: 100vw;
+      margin: 1rem 0rem;
+    }
+
+    .search-container,
+    .input-container,
+    .add-display-container,
+    .output-container {
+        flex-flow: column wrap;
+        max-width: 100vw;
+    }
+
+    #searchResult {
+        margin-top: 2.8rem;
+    }
+
+    .output-container {
+        padding: 0.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+        max-width: 100vw;
+    }
+
+    th, td, .delete {
+        word-break: break-all;
+        padding: 0rem;
+    }
+
+    footer {
+        margin-top: 2rem;
+    } 
+}
