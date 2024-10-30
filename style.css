@@ -203,6 +203,7 @@ button:hover {
 }
 
 table {
+    display: block;
     border-collapse: collapse;
     background-color: var(--color-light);
 }
