@@ -193,7 +193,6 @@ button:hover {
 
 .output-container {
     flex: 1;
-    display: flex;
     min-height: 85vh;
     background-color: var(--color-light);
     border-radius: var(--border-radius);
@@ -204,7 +203,6 @@ button:hover {
 }
 
 table {
-    flex: 1;
     border-collapse: collapse;
     background-color: var(--color-light);
 }
