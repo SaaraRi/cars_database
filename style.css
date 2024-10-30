@@ -6,8 +6,8 @@
 
 :root {
     --font: "Bakbak One", sans-serif;
-    --font-small: 0.85;
-    --font-medium: 0.9rem;
+    --font-small: 0.85rem;
+    --font-medium: 1rem;
     --font-big: 1.6rem;
     --color-light: #fdffff;
     --color-dark: #333333;
@@ -62,7 +62,7 @@ header {
     background-color: var(--orange-med);
     color: var(--color-dark);
     padding-bottom: 0.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     width: 100%;
 }
 
@@ -84,15 +84,14 @@ header h1 {
 h2 {
     font-size: var(--font-big);
     color: var(--color-dark);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.3rem;
     align-self: flex-start;
   }
 
 label {
-    display: block;
-    text-align: left;
+    display: flex;
     font-size: var(--font-small);
-    margin: 0.9rem 0.5rem 0 0;
+    margin: 0.9rem 0 0.15rem 0;
 }
 
 input, select { 
@@ -100,11 +99,10 @@ input, select {
     font-size: var(--font-medium);
     color: var(--color-dark);
     background-color: var(--color-light);
-    padding: 0.5em;
+    padding: 0.5rem;
     border: var(--basic-border);
     border-radius: var(--border-radius);
     width: 100%;
-    margin-top: 0.2rem;
     box-shadow: var(--shadow-small);
 }
 
@@ -116,13 +114,13 @@ input:placeholder-shown {
 button {
     flex: 1;
     font-family: var(--font);
-    font-size: var(--ont-medium);
+    font-size: var(--font-small);
     color: var(--color-light);
     background-color: var(--blue);
     border: none;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-small);
-    padding: 0.7rem 1rem;
+    padding: 0.5rem;
     margin-top: 2rem;
     text-transform: capitalize;
     cursor: pointer;
@@ -148,8 +146,8 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    max-width: 44vw;
-    margin: 2rem auto;
+    max-width: 42vw;
+    margin: 3rem auto;
 }
 
 #searchCarForm {
@@ -161,12 +159,14 @@ button:hover {
     font-size: var(--font-medium);
     line-height: 22px;
     color: var(--color-dark);
-    height: auto;
-    margin: 1rem 1rem 1rem 4rem;
+    margin: 1rem 0rem 1rem 3rem;
 }
 
 .add-display-container {
+    width: 100vw;
     display: flex;
+    justify-content: center;
+    margin: 6rem 0rem;
   }
 
 .input-container {
@@ -175,9 +175,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     flex: 1;
-    max-width: 340px;
-    margin-left: 1.5rem;
-    margin-top: 3rem;
+    margin: 0 1rem 0 2rem;
     height: 100%;
 }
 
@@ -187,34 +185,36 @@ button:hover {
 
 #form-text {
     min-width: 280px;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.8rem;
     font-size: var(--font-small);
     color: var(--color-dark);
 }
 
 .output-container {
-    flex: 2;
+    flex: 1;
+    display: flex;
     min-height: 85vh;
     background-color: var(--color-light);
     border-radius: var(--border-radius);
-    padding: 1rem;
-    margin: 3rem 1.5rem; 
+    margin: 0 2rem 0 1rem;
+    padding: 0.5rem;
     box-shadow: var(--shadow-big);
+    
 }
 
 table {
+    flex: 1;
     border-collapse: collapse;
-    width: 100%;
     background-color: var(--color-light);
 }
   
 td,
 th {
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
     border: 1px solid #c3c3c3;
     word-break: normal;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 0;
 }
   
@@ -305,6 +305,7 @@ footer {
         left: 0;
         top: 155px;
         width: 100%;
+        background-color: #111111;
         background-image: url('pexels-pixabay-38570.jpg');
         filter: opacity(70%);
     }
@@ -313,20 +314,14 @@ footer {
         margin-bottom: 1.5rem;
       }
 
-    input, select,
+    input, select, label, 
     .searchbutton, .inputButtons, 
     #form-text {
         width: 80vw;
     }
 
-    select input {
-        padding: 0.5rem;
-        box-shadow: var(--shadow-small);
-    }
-
-    .inputButtons button {
-        margin-top: 1.5rem;
-        margin-bottom: 0.3rem;
+    label {
+        margin: 0.7rem 0 0.1rem 0;
     }
 
     #form-text {
@@ -334,26 +329,38 @@ footer {
         margin-bottom: 0rem;
     }
 
-    .container {
-      padding: 1rem rem;
-      width: 100vw;
-      margin: 1rem 0rem;
+    .inputButtons button {
+        margin-top: 1.3rem;
+        margin-bottom: 0.3rem;
     }
 
-    .search-container,
+    .container {
+        padding: 1rem rem;
+        border-radius: 0;
+      }
+  
     .input-container,
-    .add-display-container,
     .output-container {
+        width: 100vw;
+        margin: 1.5rem 0;
+    }
+    
+    .input-container,
+    .search-container,
+    .add-display-container {
         flex-flow: column wrap;
+        margin: 0;
+    }
+
+    .search-container {
         max-width: 100vw;
+        margin-bottom: 1.5rem ;
     }
 
     #searchResult {
-        margin-top: 2.8rem;
-    }
-
-    .output-container {
-        padding: 0.5rem;
+        margin-top: 2.8rem ;
+        margin-left: 0rem;
+        margin-bottom: 0rem;
     }
 
     table {
@@ -367,6 +374,6 @@ footer {
     }
 
     footer {
-        margin-top: 2rem;
+        margin-bottom: 0;
     } 
 }
