@@ -320,6 +320,11 @@ footer {
         width: 80vw;
     }
 
+    input, select {
+        font-size: medium;
+        padding: 0.5rem;
+    }
+
     label {
         margin: 0.7rem 0 0.1rem 0;
     }
@@ -344,7 +349,7 @@ footer {
         width: 100vw;
         margin: 1.5rem 0;
     }
-    
+
     .input-container,
     .search-container,
     .add-display-container {
