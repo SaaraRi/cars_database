@@ -203,7 +203,7 @@ button:hover {
 }
 
 table {
-    display: block;
+    flex: 1;
     border-collapse: collapse;
     background-color: var(--color-light);
 }
@@ -213,6 +213,7 @@ th {
     font-size: var(--font-medium);
     border: 1px solid #c3c3c3;
     word-break: normal;
+    max-height: 2rem;
     padding: 0.5rem 1rem;
     margin: 0;
 }
